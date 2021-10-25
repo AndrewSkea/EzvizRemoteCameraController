@@ -44,6 +44,18 @@ def choose_inside1_cam(channel):
 def choose_inside2_cam(channel):
     controller.select(Cameras.INSIDE2)
 
+def move_up(channel):
+    controller.move_up()
+
+def move_left(channel):
+    controller.move_up()
+
+def move_down(channel):
+    controller.move_up()
+
+def move_right(channel):
+    controller.move_up()
+
 
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
@@ -61,10 +73,10 @@ GPIO.add_event_detect(cam_1_pin, GPIO.RISING, callback=choose_turbine_cam, bounc
 GPIO.add_event_detect(cam_2_pin, GPIO.RISING, callback=choose_building_cam, bouncetime=bouncetime)
 GPIO.add_event_detect(cam_3_pin, GPIO.RISING, callback=choose_inside1_cam, bouncetime=bouncetime)
 GPIO.add_event_detect(cam_4_pin, GPIO.RISING, callback=choose_inside2_cam, bouncetime=bouncetime)
-GPIO.add_event_detect(move_up_pin, GPIO.RISING, callback=controller.move_up, bouncetime=bouncetime)
-GPIO.add_event_detect(move_left_pin, GPIO.RISING, callback=controller.move_left, bouncetime=bouncetime)
-GPIO.add_event_detect(move_down_pin, GPIO.RISING, callback=controller.move_down, bouncetime=bouncetime)
-GPIO.add_event_detect(move_right_pin, GPIO.RISING, callback=controller.move_right, bouncetime=bouncetime)
+GPIO.add_event_detect(move_up_pin, GPIO.RISING, callback=move_up, bouncetime=bouncetime)
+GPIO.add_event_detect(move_left_pin, GPIO.RISING, callback=move_left, bouncetime=bouncetime)
+GPIO.add_event_detect(move_down_pin, GPIO.RISING, callback=move_down, bouncetime=bouncetime)
+GPIO.add_event_detect(move_right_pin, GPIO.RISING, callback=move_right, bouncetime=bouncetime)
 
 message = input("Press enter to quit\n\n") # Run until someone presses enter
 GPIO.cleanup()
