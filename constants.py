@@ -7,9 +7,9 @@ cam_1_pin = 7
 cam_2_pin = 8
 cam_3_pin = 10
 cam_4_pin = 11
-move_up_pin = 11
-move_left_pin = 12
-move_down_pin = 13
+move_up_pin = 12
+move_left_pin = 13
+move_down_pin = 19
 move_right_pin = 15
 
 class Cameras(Enum):

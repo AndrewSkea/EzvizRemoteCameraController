@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import logging
 import os
+import sys
 
 import RPi.GPIO as GPIO
 from dotenv import load_dotenv
@@ -11,11 +12,18 @@ from controller import CameraController
 
 # Logging
 logging.basicConfig(
-    filename='controller.log',
     level=logging.DEBUG,
     format='%(asctime)s %(levelname)s %(module)s - %(funcName)s: %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S',
 )
+
+logger = logging.getLogger(__name__)
+
+output_file_handler = logging.FileHandler("output.log")
+stdout_handler = logging.StreamHandler(sys.stdout)
+
+logger.addHandler(output_file_handler)
+logger.addHandler(stdout_handler)
 
 logger = logging.getLogger(__name__)
 

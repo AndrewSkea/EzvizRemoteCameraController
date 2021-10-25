@@ -32,10 +32,11 @@ class CameraController:
 
     def setup_cameras(self):
         cameras = self.client.load_cameras()
-        for cam, serial in CAMERA_NAMES:
+        self.logger(cameras)
+        for cam, serial in CAMERA_NAMES.items():
             self.cameras[cam] = Camera(
                 CAMERA_NAMES[cam], self.client,
-                cameras[CAMERA_NAMES[serial]]
+                cameras[serial]
             )
 
     def select(self, choice):
