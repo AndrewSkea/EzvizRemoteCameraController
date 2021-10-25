@@ -48,13 +48,13 @@ def move_up(channel):
     controller.move_up()
 
 def move_left(channel):
-    controller.move_up()
+    controller.move_left()
 
 def move_down(channel):
-    controller.move_up()
+    controller.move_down()
 
 def move_right(channel):
-    controller.move_up()
+    controller.move_right()
 
 
 GPIO.setwarnings(False) # Ignore warning for now
