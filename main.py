@@ -25,8 +25,6 @@ stdout_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(output_file_handler)
 logger.addHandler(stdout_handler)
 
-logger = logging.getLogger(__name__)
-
 # OS Environment variables
 load_dotenv()
 APP_USERNAME = os.environ.get("EZVIZ_USERNAME")

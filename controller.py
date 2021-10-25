@@ -32,7 +32,7 @@ class CameraController:
 
     def setup_cameras(self):
         cameras = self.client.load_cameras()
-        self.logger(cameras)
+        self.logger.info(cameras)
         for cam, serial in CAMERA_NAMES.items():
             self.cameras[cam] = Camera(
                 CAMERA_NAMES[cam], self.client,
