@@ -3,14 +3,14 @@ from enum import Enum
 
 # Global Env Variables
 bouncetime = 750
-cam_1_pin = 7
-cam_2_pin = 8
-cam_3_pin = 10
-cam_4_pin = 11
-move_up_pin = 12
-move_left_pin = 13
-move_down_pin = 19
-move_right_pin = 15
+cam_1_pin = 13
+cam_2_pin = 15
+cam_3_pin = 18
+cam_4_pin = 16
+move_up_pin = 8
+move_left_pin = 12
+move_down_pin = 11
+move_right_pin = 10
 
 class Cameras(Enum):
     BUILDING=0
