@@ -4,7 +4,7 @@ from enum import Enum
 # Global Env Variables
 bouncetime = 750
 cam_1_pin = 13
-cam_2_pin = 15
+cam_2_pin = 7
 cam_3_pin = 18
 cam_4_pin = 16
 move_up_pin = 8
