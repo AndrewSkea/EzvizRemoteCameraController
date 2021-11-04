@@ -24,4 +24,3 @@ CAMERA_NAMES = {
     Cameras.INSIDE1: "F83286711",
     Cameras.INSIDE2: "F75629415"
 }
-

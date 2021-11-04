@@ -31,30 +31,63 @@ APP_USERNAME = os.environ.get("EZVIZ_USERNAME")
 APP_PASSWORD = os.environ.get("EZVIZ_PASSWORD")
 
 controller = CameraController(APP_USERNAME, APP_PASSWORD, logger)
+is_moving = False
 
 def choose_turbine_cam(channel):
-    controller.select(Cameras.TURBINE)
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.select(Cameras.TURBINE)
+    is_moving = False
 
 def choose_building_cam(channel):
-    controller.select(Cameras.BUILDING)
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.select(Cameras.BUILDING)
+    is_moving = False
 
 def choose_inside1_cam(channel):
-    controller.select(Cameras.INSIDE1)
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.select(Cameras.INSIDE1)
+    is_moving = False
 
 def choose_inside2_cam(channel):
-    controller.select(Cameras.INSIDE2)
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.select(Cameras.INSIDE2)
+    is_moving = False
 
 def move_up(channel):
-    controller.move_up()
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.move_up()
+    is_moving = False
 
 def move_left(channel):
-    controller.move_left()
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.move_left()
+    is_moving = False
 
 def move_down(channel):
-    controller.move_down()
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.move_down()
+    is_moving = False
 
 def move_right(channel):
-    controller.move_right()
+    global is_moving
+    if not is_moving:
+        is_moving = True
+        controller.move_right()
+    is_moving = False
 
 
 GPIO.setwarnings(False) # Ignore warning for now
