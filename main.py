@@ -2,6 +2,7 @@
 import logging
 import os
 import sys
+import time
 
 import RPi.GPIO as GPIO
 from dotenv import load_dotenv
@@ -38,6 +39,7 @@ def choose_turbine_cam(channel):
     if not is_moving:
         is_moving = True
         controller.select(Cameras.TURBINE)
+        time.sleep(0.1)
     is_moving = False
 
 def choose_building_cam(channel):
@@ -45,6 +47,7 @@ def choose_building_cam(channel):
     if not is_moving:
         is_moving = True
         controller.select(Cameras.BUILDING)
+        time.sleep(0.1)
     is_moving = False
 
 def choose_inside1_cam(channel):
@@ -52,6 +55,7 @@ def choose_inside1_cam(channel):
     if not is_moving:
         is_moving = True
         controller.select(Cameras.INSIDE1)
+        time.sleep(0.1)
     is_moving = False
 
 def choose_inside2_cam(channel):
@@ -59,6 +63,7 @@ def choose_inside2_cam(channel):
     if not is_moving:
         is_moving = True
         controller.select(Cameras.INSIDE2)
+        time.sleep(0.1)
     is_moving = False
 
 def move_up(channel):
@@ -66,6 +71,7 @@ def move_up(channel):
     if not is_moving:
         is_moving = True
         controller.move_up()
+        time.sleep(0.1)
     is_moving = False
 
 def move_left(channel):
@@ -73,6 +79,7 @@ def move_left(channel):
     if not is_moving:
         is_moving = True
         controller.move_left()
+        time.sleep(0.1)
     is_moving = False
 
 def move_down(channel):
@@ -80,6 +87,7 @@ def move_down(channel):
     if not is_moving:
         is_moving = True
         controller.move_down()
+        time.sleep(0.1)
     is_moving = False
 
 def move_right(channel):
@@ -87,6 +95,7 @@ def move_right(channel):
     if not is_moving:
         is_moving = True
         controller.move_right()
+        time.sleep(0.1)
     is_moving = False
 
 
