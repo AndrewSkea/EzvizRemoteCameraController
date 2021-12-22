@@ -1,0 +1,13 @@
+[Unit]
+Description=EzvizContoller
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/pi/ezviz-pi-cam-controller
+ExecStart=/home/pi/ezviz-pi-cam-controller/venv/bin/python /home/pi/ezviz-pi-cam-controller/main.py
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

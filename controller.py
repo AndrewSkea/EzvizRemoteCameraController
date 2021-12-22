@@ -49,21 +49,25 @@ class CameraController:
         self.logger.info("Chose {}".format(choice))
 
     def move_up(self):
+        self.logger.info("Moving Up, Cam: {}".format(self._selected))
         if not self.is_test:
             self.cameras[self._selected].move_up()
-        self.logger.info("Moving Up, Cam: {}".format(self._selected))
+        self.logger.info("Completed UP Action, Cam: {}".format(self._selected))
 
     def move_down(self):
+        self.logger.info("Moving Down, Cam: {}".format(self._selected))
         if not self.is_test:
             self.cameras[self._selected].move_down()
-        self.logger.info("Moving Down, Cam: {}".format(self._selected))
+        self.logger.info("Completed DOWN Action, Cam: {}".format(self._selected))
 
     def move_right(self):
+        self.logger.info("Moving Right, Cam: {}".format(self._selected))
         if not self.is_test:
             self.cameras[self._selected].move_right()
-        self.logger.info("Moving Right, Cam: {}".format(self._selected))
+        self.logger.info("Completed Right Action, Cam: {}".format(self._selected))
 
     def move_left(self):
+        self.logger.info("Moving Left, Cam: {}".format(self._selected))
         if not self.is_test:
             self.cameras[self._selected].move_left()
-        self.logger.info("Moving Left, Cam: {}".format(self._selected))
+        self.logger.info("Completed Left Action, Cam: {}".format(self._selected))

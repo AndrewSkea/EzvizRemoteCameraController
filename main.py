@@ -26,7 +26,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-output_file_handler = logging.FileHandler("output.log")
+output_file_handler = logging.FileHandler("/home/pi/logs/output.log")
 stdout_handler = logging.StreamHandler(sys.stdout)
 
 logger.addHandler(output_file_handler)
