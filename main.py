@@ -126,5 +126,7 @@ GPIO.add_event_detect(move_left_pin, GPIO.RISING, callback=move_left, bouncetime
 GPIO.add_event_detect(move_down_pin, GPIO.RISING, callback=move_down, bouncetime=bouncetime)
 GPIO.add_event_detect(move_right_pin, GPIO.RISING, callback=move_right, bouncetime=bouncetime)
 
-message = input("Press enter to quit\n\n") # Run until someone presses enter
+print("Waiting foreverrrr.....")
+while True:
+    time.sleep(1)
 GPIO.cleanup()
